@@ -29,7 +29,7 @@
     <!-- Job Application head / counter Area - ENDS-->
 
 
-    <section id="available-all-jobs-area" class="pt-6 pb-40 w-full max-w-277.5 mx-auto border-t border-[#E6E7E9] px-2 md:px-2 lg:px-0">
+    <section id="available-all-jobs-area" class="pt-6 pb-20 w-full max-w-277.5 mx-auto border-t border-[#E6E7E9] px-2 md:px-2 lg:px-0">
         <div id="job-and-count-title" class="flex justify-between items-center h-full">
             <h2 class="font-oswald text-2xl font-medium text-brand-primary">Available Jobs</h2>
             <p class="font-roboto text-base font-medium text-brand-secondary"><span id="available-jobs">0</span> Jobs</p>
@@ -135,12 +135,55 @@
                 </div>
                 <!-- single job start Ends -->
 
-                
-
-
-
             </div>
         </div>
+    </section>
+
+    <section class="modal_area">
+        <!-- Add New Job Button Trigger -->
+        <div class="w-full max-w-277.5 mx-auto px-2 md:px-2 lg:px-0 mb-4 flex justify-end">
+            <button id="open-modal-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-lg flex items-center gap-2 cursor-pointer shadow-md transition-colors">
+                <span>+ Add New Job</span>
+            </button>
+        </div>
+
+        <!-- Main Modal Backdrop Overlay (Hidden by Default) -->
+        <div id="job-modal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden px-4">
+            <div class="bg-white rounded-lg w-full max-w-lg shadow-xl overflow-hidden animate-fade-in">
+                <!-- Modal Head Header Area -->
+                <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                    <h3 class="font-oswald text-xl font-medium text-brand-primary">Create New Job Tracking Card</h3>
+                    <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600 text-2xl font-bold cursor-pointer">&times;</button>
+                </div>
+                
+                <!-- Modal Form Body Input Structures -->
+                <form id="add-job-form" class="p-6 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Company Name *</label>
+                        <input type="text" id="form-company" required class="w-full border border-gray-300 rounded-md p-2.5 outline-none focus:border-blue-600" placeholder="e.g. Google, Stripe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Job Role Title *</label>
+                        <input type="text" id="form-role" required class="w-full border border-gray-300 rounded-md p-2.5 outline-none focus:border-blue-600" placeholder="e.g. Frontend Engineer">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Job Details Parameters *</label>
+                        <input type="text" id="form-details" required class="w-full border border-gray-300 rounded-md p-2.5 outline-none focus:border-blue-600" placeholder="e.g. Remote • Full-time • $120k - $150k">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Job Description Snippet</label>
+                        <textarea id="form-description" rows="3" class="w-full border border-gray-300 rounded-md p-2.5 outline-none focus:border-blue-600" placeholder="Brief details about the role..."></textarea>
+                    </div>
+                    
+                    <!-- Modal Action Buttons Footer -->
+                    <div class="pt-4 border-t border-gray-100 flex justify-end gap-3">
+                        <button type="button" id="cancel-modal-btn" class="px-4 py-2.5 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 cursor-pointer">Cancel</button>
+                        <button type="submit" class="px-5 py-2.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer font-medium">Save Job Card</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </section>
 
 
