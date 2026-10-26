@@ -1,4 +1,4 @@
-# 💼 Job Application Tracker
+# 💼 Job Application Tracker ![HTML5](https://shields.io)
 
 A clean, responsive, real-time **Job Application Tracker** dashboard built using **Vanilla JavaScript** and styled with **Tailwind CSS**. This tool helps developers manage their job hunting pipeline efficiently by tracking statuses, updating live counters, and creating new logs dynamically.
 
