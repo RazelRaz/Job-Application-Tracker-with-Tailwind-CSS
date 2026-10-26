@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+<body class="font-roboto bg-[#F8FAFC]">
+    
+    <!-- Job Application head / counter Area -->
+    <section id="job-application-head-counter" class="w-full max-w-277.5 mx-auto pt-4 lg:pt-15 px-2 md:px-2 lg:px-0 pb-8">
+        <h1 class="font-oswald text-brand-primary font-bold text-title--line-height">Job Application Tracker</h1>
+        <div class="job_counter_container grid md:grid-cols-3 gap-4 pt-5">
+            <div class="bg-white p-5 rounded-lg">
+                <p class="text-brand-dark text-lg font-medium">Total</p>
+                <h3 id="top-total" class="text-2xl font-bold text-brand-primary">0</h3>
+            </div>
+            <div class="bg-white p-5 rounded-lg">
+                <p class="text-brand-dark text-lg font-medium">Interview</p>
+                <h3 class="text-2xl font-bold text-brand-success">0</h3>
+            </div>
+            <div class="bg-white p-5 rounded-lg">
+                <p class="text-brand-dark text-lg font-medium">Rejected</p>
+                <h3 class="text-2xl font-bold text-brand-danger">0</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Job Application head / counter Area - ENDS-->
+
+
+    <section id="available-all-jobs-area" class="pt-6 pb-40 w-full max-w-277.5 mx-auto border-t border-[#E6E7E9] px-2 md:px-2 lg:px-0">
+        <div id="job-and-count-title" class="flex justify-between items-center h-full">
+            <h2 class="font-oswald text-2xl font-medium text-brand-primary">Available Jobs</h2>
+            <p class="font-roboto text-base font-medium text-brand-secondary"><span id="available-jobs">0</span> Jobs</p>
+        </div>
+
+        <div id="available-all-jobs" class="pt-6">
+            <div class="status-filter flex gap-3">
+                <button class="status-btn cursor-pointer w-20 py-2 text-sm font-medium font-roboto rounded-sm border bg-blue-600 text-white border-blue-600" data-status="all">All</button>
+                <button class="tatus-interview-btn status-btn cursor-pointer bg-white w-20 py-2 text-sm font-medium font-roboto rounded-sm border border-gray-200 text-brand-secondary" data-status="interview">Interview</button>
+                <button class="status-rejected-btn status-btn cursor-pointer bg-white w-20 py-2 text-sm font-medium font-roboto rounded-sm border border-gray-200 text-brand-secondary" data-status="rejected">Rejected</button>
+            </div>
+            <div id="all-jobs" class="mt-4">
+                <!-- single job start -->
+                <div data-id="1" class="single-job bg-white rounded-sm p-6 shadow mb-4">
+                    <div class="job_title_box flex justify-between items-center h-full">
+                        <div>
+                            <h2 class="font-roboto text-brand-primary font-bold text-[22px]">Mobile First Corp</h2>
+                            <p class="text-[20px] text-brand-secondary">React Native Developer</p>
+                        </div>
+                        <div>
+                            <button id="" class="delete-button cursor-pointer"><img src="/src/images/delete.svg" alt="button" class="pointer-events-none"></button>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-brand-secondary text-lg font-medium">Remote • Full-time • $130,000 - $175,000</p>
+                    </div>
+                    <button class="bg-[#EEF4FF] px-4 py-3 uppercase font-medium text-brand-primary rounded-lg mt-5">Not Applied</button>
+                    <p class="text-[#323B49] text-xl mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <div class="flex gap-3 mt-5">
+                        <button class="status-interview-btn border-2 border-brand-success px-4 py-3 text-brand-success uppercase text-sm font-semibold rounded-lg">interview</button>
+                        <button class="status-rejected-btn border-2 border-brand-danger px-4 py-3 text-brand-danger uppercase text-sm font-semibold rounded-lg">Rejected</button>
+                    </div>
+                </div>
+                <!-- single job start Ends -->
+
+                <!-- single job start -->
+                <div data-id="2" class="single-job bg-white rounded-sm p-6 shadow mb-4">
+                    <div class="job_title_box flex justify-between items-center h-full">
+                        <div>
+                            <h2 class="font-roboto text-brand-primary font-bold text-[22px]">WebFlow Agency</h2>
+                            <p class="text-[20px] text-brand-secondary">Web Designer & Developer</p>
+                        </div>
+                        <div>
+                            <button id="" class="delete-button cursor-pointer"><img src="/src/images/delete.svg" alt="delete-button"></button>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-brand-secondary text-lg font-medium">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                    </div>
+                    <button class="bg-[#EEF4FF] px-4 py-3 uppercase font-medium text-brand-primary rounded-lg mt-5">Not Applied</button>
+                    <p class="text-[#323B49] text-xl mt-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <div class="flex gap-3 mt-5">
+                        <button class="status-interview-btn border-2 border-brand-success px-4 py-3 text-brand-success uppercase text-sm font-semibold rounded-lg">interview</button>
+                        <button class="status-rejected-btn border-2 border-brand-danger px-4 py-3 text-brand-danger uppercase text-sm font-semibold rounded-lg">Rejected</button>
+                    </div>
+                </div>
+                <!-- single job start Ends -->
+
+                <!-- single job start -->
+                <div data-id="3" class="single-job bg-white rounded-sm p-6 shadow mb-4">
+                    <div class="job_title_box flex justify-between items-center h-full">
+                        <div>
+                            <h2 class="font-roboto text-brand-primary font-bold text-[22px]">FinTech Solutions</h2>
+                            <p class="text-[20px] text-brand-secondary">Backend Engineer (Node.js)</p>
+                        </div>
+                        <div>
+                            <button id="" class="delete-button cursor-pointer"><img src="/src/images/delete.svg" alt="delete-button"></button>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-brand-secondary text-lg font-medium">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                    </div>
+                    <button class="bg-[#EEF4FF] px-4 py-3 uppercase font-medium text-brand-primary rounded-lg mt-5">Not Applied</button>
+                    <p class="text-[#323B49] text-xl mt-2">Scale high-throughput financial transaction APIs.</p>
+                    <div class="flex gap-3 mt-5">
+                        <button class="status-interview-btn border-2 border-brand-success px-4 py-3 text-brand-success uppercase text-sm font-semibold rounded-lg">interview</button>
+                        <button class="status-rejected-btn border-2 border-brand-danger px-4 py-3 text-brand-danger uppercase text-sm font-semibold rounded-lg">Rejected</button>
+                    </div>
+                </div>
+                <!-- single job start Ends -->
+
+
+                <!-- single job start -->
+                <div data-id="4" class="single-job bg-white rounded-sm p-6 shadow mb-4">
+                    <div class="job_title_box flex justify-between items-center h-full">
+                        <div>
+                            <h2 class="font-roboto text-brand-primary font-bold text-[22px]">CyberGuard Inc</h2>
+                            <p class="text-[20px] text-brand-secondary">Security Analyst</p>
+                        </div>
+                        <div>
+                            <button id="" class="delete-button cursor-pointer"><img src="/src/images/delete.svg" alt="delete-button"></button>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-brand-secondary text-lg font-medium">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                    </div>
+                    <button class="bg-[#EEF4FF] px-4 py-3 uppercase font-medium text-brand-primary rounded-lg mt-5">Not Applied</button>
+                    <p class="text-[#323B49] text-xl mt-2">Monitor infrastructure and mitigate vulnerabilities.</p>
+                    <div class="flex gap-3 mt-5">
+                        <button class="status-interview-btn border-2 border-brand-success px-4 py-3 text-brand-success uppercase text-sm font-semibold rounded-lg">interview</button>
+                        <button class="status-rejected-btn border-2 border-brand-danger px-4 py-3 text-brand-danger uppercase text-sm font-semibold rounded-lg">Rejected</button>
+                    </div>
+                </div>
+                <!-- single job start Ends -->
+
+                
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="/src/main.js"></script>
+</body>
+</html>

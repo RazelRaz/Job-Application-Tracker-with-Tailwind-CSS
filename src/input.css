@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Custom fonts */
+    --font-oswald: "Oswald", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+
+    /* My custom brand colors */
+    --color-brand-primary: #002C5C;
+    --color-brand-secondary: #64748B;
+    --color-brand-dark: #323B49;
+    --color-brand-success: #10B981;
+    --color-brand-danger: #EF4444;
+    
+    /* font size & line height */
+    --text-title: 32px;
+    --text-title--line-height: 32px;
+}
